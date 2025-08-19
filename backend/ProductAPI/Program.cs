@@ -2,17 +2,27 @@ using Microsoft.EntityFrameworkCore;
 using ProductAPI.Data;
 using ProductAPI.Repositories;
 using ProductAPI.Services;
+using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
+
+
 // PostgreSQL bağlantısı
+
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(connectionString));
 
 // Dependency Injection
 builder.Services.AddScoped<ProductRepository>();

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ProductAPI.Models;
 using ProductAPI.Data;
+using System;
 
 namespace ProductAPI.Repositories;
 
@@ -15,6 +16,7 @@ public class ProductRepository
 
     public async Task<List<Product>> GetAllAsync()
     {
+        
         return await _context.Products.ToListAsync();
     }
 
