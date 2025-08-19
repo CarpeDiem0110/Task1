@@ -5,7 +5,7 @@ using ProductAPI.Services;
 namespace ProductAPI.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/product")]
 public class ProductController : ControllerBase
 {
     private readonly ProductService _service;
