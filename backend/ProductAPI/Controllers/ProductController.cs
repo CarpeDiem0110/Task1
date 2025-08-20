@@ -59,13 +59,18 @@ public class ProductController : ControllerBase
                     {
                         var fileName = Guid.NewGuid().ToString() + ext;
                         var filePath = Path.Combine(uploads, fileName);
-                        
+
                         await using (var stream = System.IO.File.Create(filePath))
                         {
                             await file.CopyToAsync(stream);
                         }
+
                         
-                        var imageUrl = $"http://localhost:5233/uploads/{fileName}";
+                        DotNetEnv.Env.Load();
+                        var apiPort = Environment.GetEnvironmentVariable("API_PORT");
+                        var imageUrl = $"http://localhost:{apiPort}/uploads/{fileName}";
+
+                        
                         imageUrls.Add(imageUrl);
                     }
                 }

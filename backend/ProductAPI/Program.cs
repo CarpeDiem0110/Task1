@@ -6,9 +6,6 @@ using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-
-
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -30,10 +27,19 @@ builder.Services.AddCors(options =>
 
 
 // PostgreSQL bağlantısı
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+DotNetEnv.Env.Load();
+builder.Configuration.AddEnvironmentVariables();
+
+
+var anotherString = Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection");
+
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(connectionString));
+    options.UseNpgsql(anotherString));
+
+
+
 
 // Dependency Injection
 builder.Services.AddScoped<ProductRepository>();
