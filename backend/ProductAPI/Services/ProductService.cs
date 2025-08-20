@@ -23,7 +23,9 @@ public class ProductService
         var product = new Product
         {
             Name = dto.Name,
-            Price = dto.Price
+            Price = dto.Price,
+            Description = dto.Description,
+            Images = dto.Images ?? new List<string>()
         };
         return await _repository.AddAsync(product);
     }

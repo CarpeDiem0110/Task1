@@ -133,3 +133,5 @@ C:\Users\eEren\Desktop\ApıDevelopment\backend\ProductAPI\bin\Debug\net9.0\zh-Ha
 C:\Users\eEren\Desktop\ApıDevelopment\backend\ProductAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\eEren\Desktop\ApıDevelopment\backend\ProductAPI\bin\Debug\net9.0\DotNetEnv.dll
 C:\Users\eEren\Desktop\ApıDevelopment\backend\ProductAPI\bin\Debug\net9.0\Sprache.dll
+C:\Users\eEren\Desktop\ApıDevelopment\backend\ProductAPI\bin\Debug\net9.0\ProductAPI.staticwebassets.runtime.json
+C:\Users\eEren\Desktop\ApıDevelopment\backend\ProductAPI\obj\Debug\net9.0\compressed\c49p4g4bkl-rj4oda708p.gz
