@@ -1,3 +1,10 @@
+
+# Proje Showcase
+
+https://github.com/user-attachments/assets/7f772a77-25b2-4acc-9887-29ae53667e2c
+
+
+
 # 🛍️ Product Management System
 
 Ürün ekleyip ürün listelenebilen basit bir ürün yönetim sistemi. 
